@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: wheat;
+}
+
+.drum-machine-grid {
+  display: grid;
+  margin-top: 0.3rem;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  justify-content: center;
+  gap: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  gap: 80px;
+  background-color: rgba(61, 12, 2, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.mixer, #display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  gap: 15px;
+}
+
+.drum-machine-grid > button {
+  display: flex;
+  cursor: pointer;
+  font-size: 2rem; 
+  border: none;
+  border-radius: 0rem;
+  justify-content: center;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.drum-machine-grid > button:hover,
+.drum-machine-grid > button:focus {
+  outline: none;
+  border: none;
+}
+
+.drum-machine-grid > button:hover {
+  background-color: rgba(255, 255, 255, .4);
+}
+/*
+.drum-machine-grid > .hover {
+  background-color: rgba(255, 255, 255, .4);
+}
+*/
+
+.power-select {
+  width: 40px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.power-on-off {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 20px;
+  height: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.volume-slider {
+  width: 100%;
+}
